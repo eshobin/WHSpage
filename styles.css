@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #01256F;
+  }
+  
+  /* header style */
+  .header {
+    grid-area: header;
+    background-color: #01256F;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    border-width: 20px;
+    border-style: solid;
+    border-color:#01256F;
+  }
+  
+  ul {
+    font-size: x-large;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffa228;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #01256F;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #fff;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left middle middle middle middle right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    border: #01256F solid 4px;
+  }
+  
+  /* left column style */
+  .left {
+    background-color: #ffa228;
+    grid-area: left;
+    color: #01256F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* middle column style */
+  .middle {
+    background-color: #ffa228;
+    grid-area: middle;
+    color: #01256F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* right column style */
+  .right {
+    background-color: #ffa228;
+    grid-area: right;
+    color: #01256F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* footer style */
+  .footer {
+    grid-area: footer;
+    background-color: rgba(5, 61, 133, 0.466);
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* grid-container style */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
